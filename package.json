@@ -1,0 +1,38 @@
+{
+  "name": "postcss-mq-extract",
+  "version": "1.0.0",
+  "description": "PostCSS plugin which extracts matched media queries to the separate file",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderyarm/postcss-mq-extract.git"
+  },
+  "keywords": [
+    "postcss",
+    "plugin",
+    "media",
+    "query",
+    "extract",
+    "separate",
+    "file"
+  ],
+  "author": "Alexander Yarm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderyarm/postcss-mq-extract/issues"
+  },
+  "homepage": "https://github.com/alexanderyarm/postcss-mq-extract#readme",
+  "dependencies": {
+    "postcss": "^5.2.8",
+    "write": "^0.3.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-postcss": "^0.8.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0"
+  }
+}

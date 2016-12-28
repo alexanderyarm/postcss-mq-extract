@@ -1,0 +1,154 @@
+@media (min-width: 768px) {
+    .ngdialog-open {
+        position:static
+    }
+}
+
+.overlay--legacy__caption {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    padding: 0.2em;
+    margin: 30px -0.5em 60px -0.5em;
+    width: calc(100% + 1em);
+    text-align: center;
+    background: #e58900;
+    color: #fff;
+    transform: rotate(-5deg) skewX(-5deg)
+}
+
+.overlay--legacy__caption__text {
+    transform: skewX(5deg)
+}
+
+.overlay--confirm {
+    display: block
+}
+
+.overlay--confirm__description {
+    padding: 0.75em;
+    text-align: center;
+    line-height: 1.25
+}
+
+.overlay--confirm__buttons {
+    padding: 0.75em;
+    padding-bottom: 0px
+}
+
+.overlay--ngdialog.ngdialog-closing .ngdialog-content {
+    animation: ngdialog-flyout .3s
+}
+
+.overlay--ngdialog .ngdialog-content {
+    display: none;
+    position: fixed;
+    top: 110px;
+    max-width: 100%;
+    z-index: 10000;
+    background: #fff;
+    border-radius: 5px;
+    left: 10px;
+    width: calc(100% - 20px);
+    padding: 1em;
+    min-height: 100px
+}
+
+@media (min-width: 768px) {
+    .overlay--ngdialog .ngdialog-content {
+        top:25%;
+        left: 50%;
+        width: 670px;
+        margin-left: -335px
+    }
+}
+
+.ngdialog-open .overlay--ngdialog .ngdialog-content {
+    display: block
+}
+
+.overlay--ngdialog .ngdialog-content .ngdialog-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.overlay--ngdialog .ngdialog-content .ngdialog-close:before {
+    background: transparent;
+    color: #ccc;
+    content: "\00D7";
+    font-size: 26px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 26px;
+    position: absolute;
+    right: 3px;
+    text-align: center;
+    top: 3px;
+    width: 30px
+}
+
+.overlay--ngdialog .ngdialog-content .ngdialog-close:hover:before,.overlay--ngdialog .ngdialog-content .ngdialog-close:active:before {
+    color: #4a4a4a
+}
+
+.overlay--ngdialog .ngdialog-content .ngdialog-message {
+    margin-bottom: .5em
+}
+
+.ngdialog-open .overlay--ngdialog .ngdialog-overlay {
+    top: 0
+}
+
+@keyframes ngdialog-flyin {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes ngdialog-flyout {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+}
+
+.overlay--no-padding .ngdialog-content {
+    padding: 0
+}
+
+@media (min-width: 768px) {
+    .overlay--legacy__caption {
+        margin:10px -0.5em 40px -0.5em
+    }
+
+    .overlay--legacy .btn {
+        width: 47%
+    }
+
+    .overlay--legacy .btn--primary {
+        float: right
+    }
+
+    .overlay--legacy .btn--secondary {
+        float: left
+    }
+}
+
+.cc-overlay .link--back {
+    position: relative;
+    left: -.5em;
+    top: -.5em
+}
