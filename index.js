@@ -14,7 +14,7 @@ module.exports = postcss.plugin('postcss-mq-extract', function(opts) {
         // create new css to write on new file
         var newCss = postcss.parse('@charset "UTF-8"');
 
-         // let's loop through all rules and extract all @media print
+        // let's loop through all rules and extract all @media print
         css.walkAtRules(function(rule) {
             if (rule.name.match(/^media/) && rule.params.match(opts.match)) {
                 // add the rule to the new css

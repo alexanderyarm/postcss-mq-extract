@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@media (min-width: 768px){
+    .ngdialog-open{
+        position: static
+    }
+}
+@media (min-width: 768px){
+    .overlay--ngdialog .ngdialog-content{
+        top: 25%;
+        left: 50%;
+        width: 670px;
+        margin-left: -335px
+    }
+}
+@media (min-width: 768px){
+    .overlay--legacy__caption{
+        margin: 10px -0.5em 40px -0.5em
+    }
+    .overlay--legacy .btn{
+        width: 47%
+    }
+    .overlay--legacy .btn--primary{
+        float: right
+    }
+    .overlay--legacy .btn--secondary{
+        float: left
+    }
+}

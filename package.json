@@ -4,7 +4,7 @@
   "description": "PostCSS plugin which extracts matched media queries to the separate file",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,16 @@
     "write": "^0.3.2"
   },
   "devDependencies": {
+    "ava": "^0.17.0",
+    "bluebird": "^3.4.7",
     "grunt": "^1.0.1",
     "grunt-postcss": "^0.8.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ]
   }
 }
