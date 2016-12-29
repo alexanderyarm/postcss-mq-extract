@@ -15,7 +15,7 @@
     "media",
     "query",
     "extract",
-    "file",
+    "file"
   ],
   "author": "Alexander Yarm",
   "license": "ISC",
