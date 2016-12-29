@@ -11,13 +11,11 @@
     "url": "git+https://github.com/alexanderyarm/postcss-mq-extract.git"
   },
   "keywords": [
-    "postcss",
-    "plugin",
+    "postcss-plugin",
     "media",
     "query",
     "extract",
-    "separate",
-    "file"
+    "file",
   ],
   "author": "Alexander Yarm",
   "license": "ISC",
