@@ -31,12 +31,12 @@ function processCss() {
     });
 }
 
-test('test output', t => {
+test('generated css equals mock css', t => {
   return processCss().then(function() {
     var processedData = readFile(generatedFile);
     var mockData = readFile(mockFile);
     t.is(processedData, mockData);
   }).catch(function(err){
-      console.log(err);
+      throw err;
   });
 })
