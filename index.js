@@ -12,11 +12,15 @@ module.exports = postcss.plugin('postcss-mq-extract', function(opts) {
         var fileName = fileDir + '/' + fileinfo.name + opts.postfix + fileinfo.ext;
 
         // create new css to write on new file
-        var newCss = postcss.parse('@charset "UTF-8"');
+        var newCss = undefined;
 
         // let's loop through all rules and extract all @media print
         css.walkAtRules(function(rule) {
             if (rule.name.match(/^media/) && rule.params.match(opts.match)) {
+                if (!newCss) {
+                    newCss = postcss.parse('@charset "UTF-8"');
+                }
+
                 // add the rule to the new css
                 newCss.append(rule);
                 rule.remove();
@@ -25,6 +29,8 @@ module.exports = postcss.plugin('postcss-mq-extract', function(opts) {
 
         // write final css with extracted to new file
         return new Promise(function (resolve, reject) {
+            if (!newCss) { resolve(); }
+            
             writeFile(fileName, newCss.toString(), function(err) {
                 if (err) {
                     reject(err);
